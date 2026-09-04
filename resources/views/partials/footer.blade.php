@@ -3,9 +3,9 @@
         <!-- Col 1: Brand & Bio -->
         <div class="md:col-span-5 space-y-4">
             <div class="flex items-center gap-3">
-                <span class="w-10 h-10 rounded-xl bg-primary flex items-center justify-center text-white shadow-md">
-                    <span class="material-symbols-outlined text-2xl">sports_tennis</span>
-                </span>
+                <div class="w-11 h-11 flex items-center justify-center shrink-0">
+                    <img src="{{ asset('images/logo-smkn2.png') }}" alt="Logo SMKN 2 Purwakarta" class="w-full h-full object-contain filter drop-shadow-md">
+                </div>
                 <div>
                     <h3 class="font-headline font-black text-xl text-white tracking-tight leading-tight">SMKN 2 BADMINTON</h3>
                     <span class="text-xs uppercase tracking-widest text-emerald-400 font-bold font-headline">Agile Court Community</span>
@@ -15,10 +15,10 @@
                 Membina generasi muda berkarakter tangguh, memiliki sportivitas tinggi, serta siap berprestasi mengharumkan nama sekolah di ajang kejuaraan bulu tangkis pelajar.
             </p>
             <div class="flex items-center gap-3 pt-2">
-                <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-lg bg-white/10 hover:bg-primary text-white flex items-center justify-center transition-colors" title="Instagram">
+                <a href="{{ $siteSettings['contact_instagram'] ?? 'https://instagram.com' }}" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-lg bg-white/10 hover:bg-primary text-white flex items-center justify-center transition-colors" title="Instagram">
                     <span class="material-symbols-outlined text-lg">photo_camera</span>
                 </a>
-                <a href="https://wa.me" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-lg bg-white/10 hover:bg-primary text-white flex items-center justify-center transition-colors" title="WhatsApp Admin">
+                <a href="https://wa.me/{{ preg_replace('/[^0-9]/', '', $siteSettings['contact_whatsapp'] ?? '6285711223344') }}" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-lg bg-white/10 hover:bg-primary text-white flex items-center justify-center transition-colors" title="WhatsApp Admin">
                     <span class="material-symbols-outlined text-lg">chat</span>
                 </a>
             </div>
@@ -48,11 +48,11 @@
             <address class="not-italic text-xs sm:text-sm text-white/70 space-y-2.5">
                 <p class="flex items-start gap-2.5">
                     <span class="material-symbols-outlined text-emerald-400 text-lg shrink-0 mt-0.5">location_on</span>
-                    <span>GOR Bulu Tangkis SMKN 2 Purwakarta,<br>Jl. Jend. Sudirman No. 123, Kab. Purwakarta, Jawa Barat</span>
+                    <span>{{ $siteSettings['contact_address'] ?? 'GOR Bulu Tangkis SMKN 2 Purwakarta, Jl. Jend. Sudirman No. 123, Kab. Purwakarta, Jawa Barat' }}</span>
                 </p>
                 <p class="flex items-center gap-2.5">
                     <span class="material-symbols-outlined text-emerald-400 text-lg shrink-0">mail</span>
-                    <span>badminton@smkn2purwakarta.sch.id</span>
+                    <span>{{ $siteSettings['contact_email'] ?? 'badminton@smkn2purwakarta.sch.id' }}</span>
                 </p>
             </address>
 

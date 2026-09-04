@@ -9,18 +9,18 @@
             <!-- Badge -->
             <div class="hero-badge inline-flex items-center gap-2 bg-secondary-container/20 text-on-secondary-container dark:text-secondary-fixed px-3 sm:px-3.5 py-1.5 rounded-full font-headline font-bold text-[11px] sm:text-xs uppercase tracking-wider border border-secondary-container/50">
                 <span class="w-2.5 h-2.5 rounded-full bg-secondary-container animate-ping"></span>
-                <span>Pendaftaran Anggota Baru 2026/2027</span>
+                <span>{{ $siteSettings['hero_badge'] ?? 'Pendaftaran Anggota Baru 2026/2027' }}</span>
             </div>
 
             <!-- Main Title -->
             <h1 class="hero-title font-headline text-3xl sm:text-5xl lg:text-6xl font-black text-on-surface uppercase tracking-tight leading-tight sm:leading-none">
-                Ekskul Bulu Tangkis <br>
-                <span class="text-primary dark:text-primary-fixed block sm:inline-block">SMKN 2 Purwakarta</span>
+                {{ $siteSettings['hero_title'] ?? 'Ekskul Bulu Tangkis' }} <br>
+                <span class="text-primary dark:text-primary-fixed block sm:inline-block">{{ $siteSettings['hero_subtitle'] ?? 'SMKN 2 Purwakarta' }}</span>
             </h1>
 
             <!-- Subtitle -->
             <p class="hero-desc text-sm sm:text-base md:text-lg text-on-surface-variant max-w-xl border-l-4 border-secondary-container pl-3.5 sm:pl-4 leading-relaxed font-medium">
-                Asah Skill. Bangun Mental Juara. Bawa Nama Sekolah. Bergabunglah bersama skuad atlet kebanggaan kami untuk mencetak prestasi gemilang di kancah regional maupun nasional.
+                {{ $siteSettings['hero_description'] ?? 'Asah Skill. Bangun Mental Juara. Bawa Nama Sekolah. Bergabunglah bersama skuad atlet kebanggaan kami untuk mencetak prestasi gemilang di kancah regional maupun nasional.' }}
             </p>
 
             <!-- CTA Group (Mobile-first full-width stack, row on sm) -->
@@ -76,7 +76,7 @@
                 <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent z-10 pointer-events-none"></div>
 
                 <img 
-                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuBn99J-Gp4uw77a681QyJYVVjBXeuKMU6SLsr4lO9r-BdJgtLMvnvFFG2SJ_UFodDNOJoqLMHNWFhn2SJDRia28YKPQVKK9HOcm2hnRCpvKC-ynYNGlaE5yPwDlOIn8lnUoKZw2qsVhyXLjkJdHNCsJOoII04kZEXoCx080y4hTgbiaQB3RZAW13h1dXo6VXmZkaW_1rccOqZ4MkUe1FZii6lVfk_qqf0tpseOTT26lF8WsLFg_5GxCQA" 
+                    src="{{ \App\Models\SiteSetting::formatImageUrl($siteSettings['hero_image'] ?? null, 'https://lh3.googleusercontent.com/aida-public/AB6AXuBn99J-Gp4uw77a681QyJYVVjBXeuKMU6SLsr4lO9r-BdJgtLMvnvFFG2SJ_UFodDNOJoqLMHNWFhn2SJDRia28YKPQVKK9HOcm2hnRCpvKC-ynYNGlaE5yPwDlOIn8lnUoKZw2qsVhyXLjkJdHNCsJOoII04kZEXoCx080y4hTgbiaQB3RZAW13h1dXo6VXmZkaW_1rccOqZ4MkUe1FZii6lVfk_qqf0tpseOTT26lF8WsLFg_5GxCQA') }}" 
                     alt="Pemain bulu tangkis SMKN 2 Purwakarta jump smash" 
                     class="w-full h-full object-cover object-top origin-center scale-100 sm:scale-105 transition-transform duration-700 hover:scale-110"
                 >

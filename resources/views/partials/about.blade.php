@@ -5,14 +5,14 @@
             <div>
                 <div class="inline-flex items-center gap-2 text-primary dark:text-primary-fixed font-headline font-bold text-xs uppercase tracking-widest mb-2">
                     <span class="w-6 h-0.5 bg-primary"></span>
-                    <span>Profil & Visi Klub</span>
+                    <span>{{ $siteSettings['about_tagline'] ?? 'Profil & Visi Klub' }}</span>
                 </div>
                 <h2 class="font-headline text-2xl sm:text-3xl md:text-4xl font-extrabold text-on-surface tracking-tight">
-                    Mencetak Juara Melalui Disiplin
+                    {{ $siteSettings['about_title'] ?? 'Mencetak Juara Melalui Disiplin' }}
                 </h2>
             </div>
             <p class="text-on-surface-variant max-w-md text-sm md:text-base leading-relaxed">
-                Ekstrakurikuler Bulu Tangkis SMKN 2 Purwakarta tidak hanya melatih kekuatan fisik dan pukulan, tetapi juga membentuk mentalitas pantang menyerah serta sportivitas sejati.
+                {{ $siteSettings['about_description'] ?? 'Ekstrakurikuler Bulu Tangkis SMKN 2 Purwakarta tidak hanya melatih kekuatan fisik dan pukulan, tetapi juga membentuk mentalitas pantang menyerah serta sportivitas sejati.' }}
             </p>
         </div>
 
@@ -26,30 +26,30 @@
                 <!-- Avatar -->
                 <div class="absolute top-12 sm:top-14 left-1/2 -translate-x-1/2 w-24 h-24 sm:w-28 sm:h-28 rounded-full border-4 border-surface-container-lowest dark:border-surface-container-lowest overflow-hidden bg-surface-container-high shadow-md">
                     <img 
-                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuC24iZz2TkMujMAjQ-41I008gvmlBQqSGnQYyAFRv-AS5DYmdLg2RdJkV90qeea5KKN3B4oueVO2oNLsjqIHE_cy4OrFZsO42-znzJqFvLpEscYG-06cCqGzPXq-GR_S5yx8StNZpm_K9zCX-SquyYPNpyeFYpXMhaDqbNjhRKRHc9RGxnVQsQsslRO-AFnvQBl6Z9f7d0obzk2Q3KHkpleCXz8juiIKDAEmS1-l4l14cekEfHSflukdQ" 
-                        alt="Bpk. Haryanto - Pelatih Utama" 
+                        src="{{ \App\Models\SiteSetting::formatImageUrl($siteSettings['coach_image'] ?? null, 'https://lh3.googleusercontent.com/aida-public/AB6AXuC24iZz2TkMujMAjQ-41I008gvmlBQqSGnQYyAFRv-AS5DYmdLg2RdJkV90qeea5KKN3B4oueVO2oNLsjqIHE_cy4OrFZsO42-znzJqFvLpEscYG-06cCqGzPXq-GR_S5yx8StNZpm_K9zCX-SquyYPNpyeFYpXMhaDqbNjhRKRHc9RGxnVQsQsslRO-AFnvQBl6Z9f7d0obzk2Q3KHkpleCXz8juiIKDAEmS1-l4l14cekEfHSflukdQ') }}" 
+                        alt="{{ $siteSettings['coach_name'] ?? 'Bpk. Haryanto' }} - {{ $siteSettings['coach_title'] ?? 'Pelatih Utama' }}" 
                         class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     >
                 </div>
 
                 <!-- Coach Information -->
                 <div class="text-center pt-2">
-                    <h3 class="font-headline text-lg sm:text-xl font-bold text-on-surface">Bpk. Haryanto</h3>
+                    <h3 class="font-headline text-lg sm:text-xl font-bold text-on-surface">{{ $siteSettings['coach_name'] ?? 'Bpk. Haryanto' }}</h3>
                     <p class="font-headline font-semibold text-xs text-primary dark:text-primary-fixed uppercase tracking-wider mt-1">
-                        Head Coach / Pelatih Utama
+                        {{ $siteSettings['coach_title'] ?? 'Head Coach / Pelatih Utama' }}
                     </p>
                     <p class="text-xs text-on-surface-variant mt-3 px-1 leading-relaxed font-medium">
-                        Mantan atlet bulu tangkis daerah dengan pengalaman membina lebih dari 10 tahun. Berdedikasi mencetak bibit unggul berprestasi dari SMKN 2 Purwakarta.
+                        {{ $siteSettings['coach_bio'] ?? 'Mantan atlet bulu tangkis daerah dengan pengalaman membina lebih dari 10 tahun. Berdedikasi mencetak bibit unggul berprestasi dari SMKN 2 Purwakarta.' }}
                     </p>
 
                     <div class="grid grid-cols-2 gap-2 mt-6 pt-4 border-t border-outline-variant/30 text-left">
                         <div class="p-2.5 rounded-lg bg-surface-container-low dark:bg-surface-container">
                             <span class="text-[11px] text-on-surface-variant block font-medium">Sertifikasi</span>
-                            <strong class="text-xs font-headline font-bold text-on-surface">Lisensi B PBSI</strong>
+                            <strong class="text-xs font-headline font-bold text-on-surface">{{ $siteSettings['coach_certification'] ?? 'Lisensi B PBSI' }}</strong>
                         </div>
                         <div class="p-2.5 rounded-lg bg-surface-container-low dark:bg-surface-container">
                             <span class="text-[11px] text-on-surface-variant block font-medium">Spesialisasi</span>
-                            <strong class="text-xs font-headline font-bold text-on-surface">Tactical & Agility</strong>
+                            <strong class="text-xs font-headline font-bold text-on-surface">{{ $siteSettings['coach_specialization'] ?? 'Tactical & Agility' }}</strong>
                         </div>
                     </div>
                 </div>

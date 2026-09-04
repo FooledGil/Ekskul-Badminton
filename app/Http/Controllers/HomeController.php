@@ -7,6 +7,7 @@ use App\Models\Gallery;
 use App\Models\MatchScore;
 use App\Models\Registration;
 use App\Models\Schedule;
+use App\Models\SiteSetting;
 
 class HomeController extends Controller
 {
@@ -25,13 +26,16 @@ class HomeController extends Controller
             'championship_win_rate' => 88,
         ];
 
+        $settings = SiteSetting::getAllMapped();
+
         return view('home', compact(
             'schedules',
             'achievements',
             'galleries',
             'matchScores',
             'highlightMatch',
-            'stats'
+            'stats',
+            'settings'
         ));
     }
 }

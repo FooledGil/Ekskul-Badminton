@@ -16,4 +16,9 @@ class Gallery extends Model
         'image_url',
         'span_class',
     ];
+
+    public function getFormattedImageUrlAttribute(): ?string
+    {
+        return SiteSetting::formatImageUrl($this->image_url);
+    }
 }

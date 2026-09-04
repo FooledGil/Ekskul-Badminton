@@ -1,13 +1,13 @@
 <nav class="fixed top-0 w-full z-40 bg-surface/95 dark:bg-surface/95 backdrop-blur-md shadow-xs border-b border-outline-variant/30 transition-all duration-300">
     <div class="flex justify-between items-center h-16 md:h-20 px-4 sm:px-6 max-w-7xl mx-auto">
         <!-- Brand Logo -->
-        <a class="font-headline text-lg sm:text-xl md:text-2xl font-extrabold text-primary dark:text-primary-fixed-dim flex items-center gap-2 sm:gap-2.5 tracking-tight group" href="{{ route('home') }}">
-            <span class="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-primary/10 dark:bg-primary-fixed/15 flex items-center justify-center text-primary group-hover:scale-105 transition-transform shrink-0">
-                <span class="material-symbols-outlined icon-fill text-xl sm:text-2xl">sports_tennis</span>
-            </span>
+        <a class="font-headline text-lg sm:text-xl md:text-2xl font-extrabold text-primary dark:text-primary-fixed-dim flex items-center gap-2.5 sm:gap-3 tracking-tight group" href="{{ route('home') }}">
+            <div class="w-9 h-9 sm:w-11 sm:h-11 flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform duration-200">
+                <img src="{{ asset('images/logo-smkn2.png') }}" alt="Logo SMKN 2 Purwakarta" class="w-full h-full object-contain filter drop-shadow-sm">
+            </div>
             <span class="flex flex-col">
                 <span class="leading-none text-on-surface">SMKN 2</span>
-                <span class="text-[10px] sm:text-xs uppercase tracking-widest text-primary font-bold">Badminton Club</span>
+                <span class="text-[10px] sm:text-xs uppercase tracking-widest text-primary dark:text-primary-fixed font-bold">Badminton Club</span>
             </span>
         </a>
 

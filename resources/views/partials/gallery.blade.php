@@ -40,7 +40,7 @@
                      data-caption="{{ $photo->caption }}">
                     
                     <img 
-                        src="{{ $photo->image_url }}" 
+                        src="{{ $photo->formatted_image_url }}" 
                         alt="{{ $photo->title }}" 
                         class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                     >

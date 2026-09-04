@@ -29,9 +29,9 @@
                 <div class="achievement-card bg-surface-container-lowest dark:bg-surface-container-lowest rounded-2xl overflow-hidden shadow-md border border-outline-variant hover:shadow-xl transition-all duration-300 group flex flex-col justify-between">
                     <!-- Card Media / Image Header -->
                     <div class="h-48 bg-surface-container-high dark:bg-surface-container overflow-hidden relative flex items-center justify-center">
-                        @if($achieve->image_url)
+                        @if($achieve->formatted_image_url)
                             <img 
-                                src="{{ $achieve->image_url }}" 
+                                src="{{ $achieve->formatted_image_url }}" 
                                 alt="{{ $achieve->title }}" 
                                 class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                             >

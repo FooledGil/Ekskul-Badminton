@@ -18,4 +18,9 @@ class Achievement extends Model
         'image_url',
         'athlete_names',
     ];
+
+    public function getFormattedImageUrlAttribute(): ?string
+    {
+        return SiteSetting::formatImageUrl($this->image_url);
+    }
 }
