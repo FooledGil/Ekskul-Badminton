@@ -1,5 +1,5 @@
 # 🏸 SMKN 2 Badminton Portal & Management System
-> **Sistem Informasi & Pendaftaran Ekstrakurikuler Bulu Tangkis SMKN 2 Purwakarta**
+> **Sistem Informasi, Pendaftaran & CMS Ekstrakurikuler Bulu Tangkis SMKN 2 Purwakarta**
 
 ![Laravel](https://img.shields.io/badge/Laravel-13.x-FF2D20?style=for-the-badge&logo=laravel&logoColor=white)
 ![PHP](https://img.shields.io/badge/PHP-%3E%3D8.3-777BB4?style=for-the-badge&logo=php&logoColor=white)
@@ -15,59 +15,59 @@
 
 ## 🌟 Fitur Utama (Features)
 
-1. **Hero & Profil Ekskul Modern**:
-   - Tampilan antarmuka berkecepatan tinggi dengan estetika modern, responsive di perangkat mobile dan desktop.
-   - Dilengkapi dukungan **Dark Mode** & **Light Mode** dinamis.
-2. **Interactive Court Visualizer**:
-   - Visualisasi interaktif lapangan bulu tangkis yang responsif dengan animasi taktik dan footwork.
-3. **Papan Skor Resmi & Match Center**:
-   - Menampilkan hasil kejuaraan dan pertandingan langsung tim sekolah.
-4. **Jadwal Latihan & Prestasi Terstruktur**:
-   - Daftar jadwal latihan mingguan dengan penanda latihan berikutnya (*next session highlight*).
-   - Katalog raihan medali emas, perak, dan perunggu tingkat kabupaten/provinsi beserta profil atlet.
-5. **Galeri Momen Kegiatan**:
-   - Grid masonry foto-foto dokumentasi latihan, turnamen, dan kebersamaan tim.
-6. **Formulir Pendaftaran Atlet Baru (AJAX)**:
-   - Validasi instan nomor WhatsApp dan data pendaftaran tanpa reload halaman.
-   - Pengecekan status pendaftaran mandiri oleh calon anggota.
-7. **Admin Dashboard Pengurus Ekskul (`/admin`)**:
-   - Manajemen seluruh data pendaftar calon anggota ekskul.
-   - Filter status pendaftar: *Menunggu*, *Diterima*, *Ditolak*.
-   - Fitur konfirmasi status pendaftaran dan input catatan pelatih (*coach notes*).
+1. **Branding & Logo Resmi SMKN 2**:
+   - Emblem resmi perisai SMKN 2 Purwakarta di navbar, footer, dan favicon browser.
+   - Dilengkapi tema dinamis **Dark Mode** & **Light Mode**.
+2. **Hero & Banner Aksi Smash Interaktif**:
+   - Tampilan visual atlet bulu tangkis dengan tipografi bold, counter statistik otomatis, dan CTA pendaftaran.
+3. **Interactive Court Visualizer**:
+   - Visualisasi interaktif lapangan bulu tangkis yang responsif dengan animasi strategi taktik zona lapangan.
+4. **Content Management System (CMS) Terpadu (`/admin`)**:
+   - **Foto & Info Pelatih (Tentang Kami)**: Unggah berkas foto pelatih (JPG/PNG/WEBP) atau URL, nama, gelar, lisensi PBSI, biodata, dan spesialisasi latihan.
+   - **Foto Hero & Teks**: Unggah foto atlet aksi smash dan ubah teks sambutan.
+   - **Manajemen Jadwal**: Tambah, edit, hapus sesi latihan mingguan dan penanda *"Sesi Berikutnya"*.
+   - **Manajemen Prestasi**: Tambah dan kelola daftar kejuaraan dengan fitur unggah foto medali/piagam.
+   - **Manajemen Galeri**: Unggah foto kegiatan dengan kategori (*Tim*, *Latihan*, *Pertandingan*) dan ukuran kartu bento grid.
+   - **Papan Skor**: Catat skor pertandingan terkini dan aktifkan sorotan (*highlight*) utama beranda.
+5. **Formulir Pendaftaran Siswa Baru (AJAX)**:
+   - Validasi instan nomor WhatsApp tanpa reload halaman dan kode registrasi otomatis (cth: `BDM-2026-001`).
+   - Fitur cek status pendaftaran mandiri oleh siswa (`/cek-status`).
+6. **Verifikasi Seleksi Calon Atlet**:
+   - Konfirmasi status pendaftaran (*Menunggu*, *Diterima*, *Ditolak*), input catatan pelatih, dan hubungi siswa via tombol WhatsApp.
 
 ---
 
-## 💻 Panduan Instalasi di Windows (Client Guide)
+## 💻 Panduan Instalasi di Windows (Client Setup Guide)
 
-Untuk pengguna sistem operasi **Windows**, Anda dapat memilih salah satu dari dua cara berikut setelah melakukan clone:
+Untuk pengguna sistem operasi **Windows**, Anda dapat memilih salah satu dari dua metode berikut setelah melakukan clone:
 
-### ⚡ Cara 1: Setup Otomatis Sekali Klik (Rekomendasi Klien)
+### ⚡ Metode 1: Setup Otomatis Sekali Klik (Sangat Direkomendasikan)
 
-Proyek ini telah menyediakan file otomatisasi khusus Windows:
-1. **Clone repository:**
+Proyek ini telah menyediakan berkas otomatisasi khusus Windows:
+1. **Clone repositori:**
    ```cmd
    git clone https://github.com/FooledGil/Ekskul-Badminton.git
    cd Ekskul-Badminton
    ```
 2. **Klik dua kali (Double-click)** file:
-   👉 `setup-windows.bat`
+   👉 **`setup-windows.bat`**
 3. Skrip otomatis akan:
-   - Membuat file `.env`
-   - Mengunduh dependensi PHP (`composer install`)
-   - Meng-generate Application Key (`php artisan key:generate`)
-   - Menyiapkan database SQLite dan mengisi seluruh data awal (`php artisan migrate:fresh --seed`)
-   - Menginstal dependensi frontend & compile CSS/JS (`npm install` & `npm run build`)
+   - Memeriksa ketersediaan PHP (>= 8.3), Composer, dan Node.js/NPM.
+   - Membuat file `.env` dari template.
+   - Mengunduh dependensi backend (`composer install`).
+   - Menghasilkan Application Key (`php artisan key:generate`).
+   - Menyiapkan database SQLite dan mengisi data awal CMS lengkap (`php artisan migrate:fresh --seed`).
+   - Menghubungkan penyimpanan media publik (`php artisan storage:link`).
+   - Memasang dependensi frontend & compile CSS/JS (`npm install` & `npm run build`).
 4. Setelah selesai, server akan otomatis menyala dan membuka website di peramban Anda!
 
-Untuk menjalankan server di lain waktu, cukup klik dua kali file 👉 `run-windows.bat`.
+Untuk menjalankan server di lain waktu, cukup klik dua kali file 👉 **`run-windows.bat`**.
 
-> 📖 **Panduan lengkap & troubleshooting Windows**: Silakan baca dokumen [PANDUAN_SETUP_WINDOWS.md](./PANDUAN_SETUP_WINDOWS.md).
+> 📖 **Panduan lengkap, tips Laragon/XAMPP, dan troubleshooting Windows**: Silakan buka dokumen [PANDUAN_SETUP_WINDOWS.md](./PANDUAN_SETUP_WINDOWS.md).
 
 ---
 
-### 🛠️ Cara 2: Setup Manual Langkah demi Langkah (CMD / PowerShell)
-
-Bagi pengembang atau pengguna yang ingin melakukan setup manual:
+### 🛠️ Metode 2: Setup Manual Langkah demi Langkah (CMD / PowerShell)
 
 ```cmd
 # 1. Masuk ke folder proyek
@@ -82,14 +82,14 @@ composer install
 # 4. Generate App Key
 php artisan key:generate
 
-# 5. Siapkan Database SQLite & Jalankan Migrasi + Seeder
+# 5. Siapkan Database SQLite & Jalankan Migrasi + Seeder CMS
 type nul > database\database.sqlite
 php artisan migrate:fresh --seed
 
-# 6. Buat Symlink Storage
+# 6. Hubungkan Penyimpanan Media Unggahan (Storage Link)
 php artisan storage:link
 
-# 7. Pasang paket frontend & build assets
+# 7. Pasang paket frontend & build assets Vite
 npm install
 npm run build
 
@@ -124,9 +124,9 @@ php artisan serve
 
 | Halaman | URL | Keterangan |
 | :--- | :--- | :--- |
-| **Portal Utama** | `http://127.0.0.1:8000/` | Beranda, Profil, Lapangan, Jadwal, Prestasi, Galeri, Form Daftar |
-| **Cek Status** | `http://127.0.0.1:8000/cek-status` | Fitur cek status pendaftaran siswa |
-| **Admin Panel** | `http://127.0.0.1:8000/admin` | Dashboard pengurus ekskul untuk verifikasi pendaftar |
+| **Portal Utama** | `http://127.0.0.1:8000/` | Beranda, Lapangan Interaktif, Jadwal, Prestasi, Galeri, Form Daftar |
+| **Cek Status Siswa** | `http://127.0.0.1:8000/cek-status` | Fitur pelacakan status pendaftaran siswa |
+| **Panel Admin & CMS**| `http://127.0.0.1:8000/admin` | Kontrol foto pelatih, hero, jadwal, prestasi, galeri, skor, dan seleksi |
 
 ---
 
@@ -134,7 +134,7 @@ php artisan serve
 
 - **Backend**: Laravel 13.x, PHP 8.3+
 - **Frontend**: Blade Templates, Tailwind CSS v4, Vanilla JavaScript, GSAP Animations
-- **Database**: SQLite (Default, Zero-config) atau MySQL
+- **Database**: SQLite (Bawaan, Ringan, Zero-config) atau MySQL
 - **Asset Bundler**: Vite 8.x
 
 ---

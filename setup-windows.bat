@@ -11,7 +11,7 @@ echo ======================================================================
 echo.
 echo Selamat datang! Skrip ini akan menyiapkan dan meng-upgrade semua
 echo kebutuhan proyek secara otomatis (Environment, Composer, Database,
-echo Seeder, dan Frontend Assets).
+echo Seeder Konten & Gambar CMS, Storage Link, dan Frontend Assets).
 echo.
 pause
 
@@ -23,8 +23,9 @@ if %errorlevel% neq 0 (
     color 0C
     echo [ERROR] PHP tidak terdeteksi di PATH sistem Windows Anda!
     echo Solusi:
-    echo 1. Pastikan Anda telah menginstal PHP ^>= 8.3 (atau via Laragon/XAMPP).
+    echo 1. Pastikan Anda telah menginstal PHP ^>= 8.3 (sangat disarankan via Laragon atau XAMPP).
     echo 2. Masukkan folder php ke Environment Variable PATH.
+    echo 3. Pastikan ekstensi aktif di php.ini: fileinfo, pdo_sqlite, sqlite3, mbstring, curl.
     echo.
     pause
     exit /b 1
@@ -120,13 +121,23 @@ if %errorlevel% neq 0 (
     echo Atau jika ingin menggunakan MySQL (XAMPP), atur konfigurasi database di file .env.
     echo.
 ) else (
-    echo [OK] Database berhasil dimigrasi dan diisi dengan data dummy (Jadwal, Prestasi, Galeri)!
+    echo [OK] Database berhasil dimigrasi dan diisi dengan data awal (Pengaturan CMS, Foto Pelatih, Jadwal, Prestasi, Galeri, Skor)!
 )
 
-:: Buat Storage Link
+:: Menyiapkan Storage Link untuk Unggah Berkas & Gambar
+echo.
+echo Menghubungkan penyimpanan media publik (storage:link)...
+if not exist storage\app\public (
+    mkdir storage\app\public
+)
+if not exist storage\app\public\uploads (
+    mkdir storage\app\public\uploads
+)
 call php artisan storage:link >nul 2>nul
+echo [OK] Penyimpanan media upload siap digunakan.
 
 :: [7/7] Install NPM Packages & Build Frontend
+echo.
 echo.
 echo [7/7] Memasang NPM packages dan melakukan kompilasi Vite...
 call npm install --no-audit
@@ -156,7 +167,7 @@ echo ======================================================================
 echo.
 echo Akses Aplikasi:
 echo - Halaman Utama : http://127.0.0.1:8000
-echo - Admin Panel   : http://127.0.0.1:8000/admin
+echo - Admin Panel   : http://127.0.0.1:8000/admin (Kelola Foto Pelatih, Hero, Jadwal, Prestasi, Galeri, Skor)
 echo.
 echo Cara Menjalankan Server Nanti:
 echo Cukup klik dua kali file 'run-windows.bat' atau ketik di terminal:
