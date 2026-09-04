@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="id"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Ekskul Bulu Tangkis SMKN 2 Purwakarta</title>
+<!-- Google Fonts: Montserrat (Headlines) & Inter (Body) -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&amp;family=Montserrat:wght@700;800&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .icon-fill {
+            font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        /* Dynamic Grid/Sporty Modernism Angled Decals */
+        .skewed-bg {
+            clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+        }
+        .skewed-bg-reverse {
+            clip-path: polygon(0 10%, 100% 0, 100% 100%, 0 100%);
+        }
+        .angled-accent {
+            transform: skewX(-8deg);
+        }
+    </style>
+<!-- Tailwind Setup -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-surface": "#1c1b1b",
+                    "on-tertiary-fixed-variant": "#930019",
+                    "tertiary-container": "#e5052f",
+                    "surface-container-high": "#eae7e7",
+                    "on-secondary": "#ffffff",
+                    "surface-variant": "#e5e2e1",
+                    "outline-variant": "#becabc",
+                    "secondary": "#765a00",
+                    "on-secondary-container": "#6c5300",
+                    "tertiary": "#b70022",
+                    "outline": "#6f7a6e",
+                    "on-primary-fixed-variant": "#005226",
+                    "surface-container-lowest": "#ffffff",
+                    "on-tertiary-fixed": "#410006",
+                    "on-primary": "#ffffff",
+                    "tertiary-fixed": "#ffdad8",
+                    "primary": "#006932",
+                    "on-error-container": "#93000a",
+                    "background": "#fcf9f8",
+                    "surface": "#fcf9f8",
+                    "primary-container": "#158443",
+                    "surface-container-low": "#f6f3f2",
+                    "on-error": "#ffffff",
+                    "primary-fixed-dim": "#77db90",
+                    "error": "#ba1a1a",
+                    "surface-container": "#f0eded",
+                    "surface-bright": "#fcf9f8",
+                    "secondary-container": "#fcc400",
+                    "on-tertiary": "#ffffff",
+                    "primary-fixed": "#93f8aa",
+                    "surface-container-highest": "#e5e2e1",
+                    "on-surface-variant": "#3f4a3f",
+                    "on-tertiary-container": "#fff8f7",
+                    "on-secondary-fixed-variant": "#594400",
+                    "inverse-primary": "#77db90",
+                    "secondary-fixed": "#ffdf95",
+                    "tertiary-fixed-dim": "#ffb3b0",
+                    "surface-dim": "#dcd9d9",
+                    "surface-tint": "#006d34",
+                    "secondary-fixed-dim": "#f5bf00",
+                    "on-secondary-fixed": "#251a00",
+                    "error-container": "#ffdad6",
+                    "on-primary-container": "#ecffea",
+                    "on-primary-fixed": "#00210b",
+                    "on-background": "#1c1b1b",
+                    "inverse-on-surface": "#f3f0ef",
+                    "inverse-surface": "#313030"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "xs": "4px",
+                    "md": "24px",
+                    "xl": "80px",
+                    "sm": "12px",
+                    "gutter": "24px",
+                    "lg": "48px",
+                    "base": "8px",
+                    "container-max": "1280px"
+            },
+            "fontFamily": {
+                    "label-bold": ["Inter"],
+                    "caption": ["Inter"],
+                    "headline-lg-mobile": ["Montserrat"],
+                    "body-lg": ["Inter"],
+                    "headline-xl": ["Montserrat"],
+                    "headline-md": ["Montserrat"],
+                    "body-md": ["Inter"],
+                    "headline-lg": ["Montserrat"]
+            },
+            "fontSize": {
+                    "label-bold": ["14px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                    "caption": ["12px", {"lineHeight": "1.4", "fontWeight": "400"}],
+                    "headline-lg-mobile": ["28px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "headline-xl": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                    "headline-md": ["24px", {"lineHeight": "1.3", "fontWeight": "700"}],
+                    "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                    "headline-lg": ["32px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700"}]
+            }
+          }
+        }
+      }
+    </script>
+</head>
+<body class="bg-surface text-on-surface font-body-md overflow-x-hidden selection:bg-secondary-container selection:text-on-secondary-container">
+<!-- JSON: TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-surface/90 dark:bg-surface-dim/90 backdrop-blur-md shadow-sm dark:bg-surface-container-high transition-all duration-300">
+<div class="flex justify-between items-center h-20 px-gutter max-w-container-max mx-auto">
+<!-- Brand Logo -->
+<a class="font-headline-md text-headline-md font-bold text-primary dark:text-primary-fixed-dim flex items-center gap-2" href="#">
+<span class="material-symbols-outlined icon-fill text-primary">sports_tennis</span>
+                SMKN 2 Badminton
+            </a>
+<!-- Navigation Links (Desktop) -->
+<ul class="hidden md:flex space-x-md">
+<li><a class="font-label-bold text-label-bold text-primary dark:text-primary-fixed-dim border-b-2 border-primary dark:border-primary-fixed-dim pb-1 hover:bg-primary/5 dark:hover:bg-primary-fixed/10 transition-all scale-105 active:scale-95 transition-transform duration-200" href="#beranda">Beranda</a></li>
+<li><a class="font-label-bold text-label-bold text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors hover:bg-primary/5 dark:hover:bg-primary-fixed/10 transition-all scale-105 active:scale-95 transition-transform duration-200" href="#tentang">Tentang Kami</a></li>
+<li><a class="font-label-bold text-label-bold text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors hover:bg-primary/5 dark:hover:bg-primary-fixed/10 transition-all scale-105 active:scale-95 transition-transform duration-200" href="#jadwal">Jadwal</a></li>
+<li><a class="font-label-bold text-label-bold text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors hover:bg-primary/5 dark:hover:bg-primary-fixed/10 transition-all scale-105 active:scale-95 transition-transform duration-200" href="#prestasi">Prestasi</a></li>
+<li><a class="font-label-bold text-label-bold text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors hover:bg-primary/5 dark:hover:bg-primary-fixed/10 transition-all scale-105 active:scale-95 transition-transform duration-200" href="#galeri">Galeri</a></li>
+</ul>
+<!-- Trailing Action -->
+<a class="hidden md:inline-block font-label-bold text-label-bold bg-tertiary-container text-on-tertiary-container px-md py-sm rounded hover:bg-tertiary transition-colors shadow-sm hover:shadow-md active:scale-95" href="#pendaftaran">
+                Daftar Sekarang
+            </a>
+<!-- Mobile Menu Toggle (Simplified) -->
+<button class="md:hidden text-on-surface p-xs focus:ring-2 focus:ring-primary rounded">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</nav>
+<!-- HERO Section -->
+<header class="relative pt-[120px] pb-xl overflow-hidden skewed-bg bg-surface-container-low" id="beranda">
+<!-- Abstract Decal -->
+<div class="absolute top-0 right-0 w-1/2 h-full bg-primary-container opacity-5 angled-accent pointer-events-none"></div>
+<div class="max-w-container-max mx-auto px-gutter grid grid-cols-1 md:grid-cols-12 gap-lg items-center relative z-10">
+<!-- Left Text Content -->
+<div class="md:col-span-6 flex flex-col items-start space-y-md">
+<div class="inline-flex items-center gap-2 bg-secondary-container/20 text-on-secondary-container px-sm py-xs rounded-full font-label-bold text-label-bold border border-secondary-container/30">
+<span class="material-symbols-outlined text-[16px]">campaign</span>
+                    Pendaftaran Anggota Baru Dibuka
+                </div>
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile md:font-headline-xl md:text-headline-xl text-on-surface uppercase tracking-tight">
+                    Ekskul Bulu Tangkis <br/>
+<span class="text-primary">SMKN 2 Purwakarta</span>
+</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-lg border-l-4 border-secondary-container pl-sm">
+                    Asah Skill. Bangun Mental Juara. Bawa Nama Sekolah. Gabung bersama kami dan jadilah generasi atlet penerus kebanggaan SMKN 2 Purwakarta.
+                </p>
+<div class="flex flex-wrap gap-sm pt-xs">
+<a class="font-label-bold text-label-bold bg-primary text-on-primary px-lg py-sm rounded shadow-[0_4px_20px_rgba(0,0,0,0.05)] hover:bg-primary-container hover:shadow-[0_12px_30px_rgba(0,0,0,0.1)] hover:-translate-y-1 transition-all duration-300" href="#pendaftaran">
+                        Gabung Sekarang
+                    </a>
+<a class="font-label-bold text-label-bold bg-transparent border-2 border-primary text-primary px-lg py-sm rounded hover:bg-primary/5 transition-colors" href="#jadwal">
+                        Lihat Jadwal
+                    </a>
+</div>
+<!-- Stats -->
+<div class="grid grid-cols-3 gap-md pt-md w-full border-t border-outline-variant/30 mt-sm">
+<div>
+<div class="font-headline-md text-headline-md text-on-surface">20+</div>
+<div class="font-caption text-caption text-on-surface-variant">Anggota Aktif</div>
+</div>
+<div>
+<div class="font-headline-md text-headline-md text-on-surface">10+</div>
+<div class="font-caption text-caption text-on-surface-variant">Prestasi</div>
+</div>
+<div>
+<div class="font-headline-md text-headline-md text-on-surface">2x</div>
+<div class="font-caption text-caption text-on-surface-variant">Latihan/Minggu</div>
+</div>
+</div>
+</div>
+<!-- Right Image -->
+<div class="md:col-span-6 relative h-[400px] md:h-[600px] w-full angled-accent overflow-hidden rounded-xl shadow-[0_12px_30px_rgba(0,0,0,0.1)]">
+<div class="absolute inset-0 bg-primary/20 z-10 mix-blend-multiply"></div>
+<img alt="Pemain bulu tangkis SMKN 2 Purwakarta melakukan smash" class="w-full h-full object-cover origin-center transform skewX(8deg) scale-110" data-alt="A dynamic, high-action photograph of a young Indonesian high school student performing a powerful badminton jump smash. The lighting is bright and sporty, capturing the fast motion with sharp clarity. The scene is set in an indoor school gymnasium with clear court lines. The overall aesthetic relies on crisp whites, vibrant athletic greens, and subtle warm skin tones, conveying an atmosphere of competitive energy and athletic discipline typical of a modern sports academy." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBn99J-Gp4uw77a681QyJYVVjBXeuKMU6SLsr4lO9r-BdJgtLMvnvFFG2SJ_UFodDNOJoqLMHNWFhn2SJDRia28YKPQVKK9HOcm2hnRCpvKC-ynYNGlaE5yPwDlOIn8lnUoKZw2qsVhyXLjkJdHNCsJOoII04kZEXoCx080y4hTgbiaQB3RZAW13h1dXo6VXmZkaW_1rccOqZ4MkUe1FZii6lVfk_qqf0tpseOTT26lF8WsLFg_5GxCQA"/>
+</div>
+</div>
+</header>
+<!-- TENTANG KAMI -->
+<section class="py-xl bg-surface relative" id="tentang">
+<div class="max-w-container-max mx-auto px-gutter">
+<div class="flex flex-col md:flex-row gap-lg items-center">
+<!-- Text Content -->
+<div class="flex-1 space-y-md">
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile md:font-headline-lg md:text-headline-lg text-on-surface flex items-center gap-sm">
+<span class="w-8 h-1 bg-secondary-container"></span> Tentang Kami
+                    </h2>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                        Ekstrakurikuler Bulu Tangkis SMKN 2 Purwakarta adalah wadah bagi siswa-siswi yang memiliki minat dan bakat dalam olahraga bulu tangkis. Kami tidak hanya fokus pada teknik bermain, tetapi juga membangun karakter, sportivitas, dan mental juara.
+                    </p>
+<ul class="space-y-sm mt-sm">
+<li class="flex items-start gap-sm">
+<span class="material-symbols-outlined text-primary mt-1">check_circle</span>
+<div>
+<h4 class="font-label-bold text-label-bold text-on-surface">Fisik &amp; Teknik</h4>
+<p class="font-caption text-caption text-on-surface-variant">Latihan rutin terstruktur untuk meningkatkan stamina dan penguasaan teknik dasar hingga lanjutan.</p>
+</div>
+</li>
+<li class="flex items-start gap-sm">
+<span class="material-symbols-outlined text-primary mt-1">check_circle</span>
+<div>
+<h4 class="font-label-bold text-label-bold text-on-surface">Pembinaan Mental</h4>
+<p class="font-caption text-caption text-on-surface-variant">Mengajarkan nilai disiplin, kerja keras, dan pantang menyerah di dalam dan luar lapangan.</p>
+</div>
+</li>
+</ul>
+</div>
+<!-- Coach Profile Card (Glassmorphism inspired, sporty) -->
+<div class="w-full md:w-[350px] bg-surface-container-lowest rounded-lg shadow-[0_4px_20px_rgba(0,0,0,0.05)] border-t-4 border-secondary-container overflow-hidden hover:shadow-[0_12px_30px_rgba(0,0,0,0.1)] transition-all duration-300">
+<div class="h-32 bg-primary relative overflow-hidden">
+<div class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCI+PGNpcmNsZSBjeD0iMiIgY3k9IjIiIHI9IjIiIGZpbGw9IiNmZmYiIGZpbGwtb3BhY2l0eT0iMC4xIi8+PC9zdmc+')] opacity-50"></div>
+</div>
+<div class="relative px-md pb-md pt-12 flex flex-col items-center text-center">
+<div class="absolute -top-16 w-32 h-32 rounded-full border-4 border-surface-container-lowest overflow-hidden bg-surface-container-high shadow-sm">
+<img alt="Pelatih Ekskul" class="w-full h-full object-cover" data-alt="A professional headshot portrait of an Indonesian male badminton coach in his 30s. He is wearing a dark green athletic polo shirt. He has a friendly yet disciplined expression, looking directly at the camera. The background is a brightly lit, out-of-focus indoor sports hall. The lighting is soft and flattering, highlighting a sense of leadership and athletic professionalism." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC24iZz2TkMujMAjQ-41I008gvmlBQqSGnQYyAFRv-AS5DYmdLg2RdJkV90qeea5KKN3B4oueVO2oNLsjqIHE_cy4OrFZsO42-znzJqFvLpEscYG-06cCqGzPXq-GR_S5yx8StNZpm_K9zCX-SquyYPNpyeFYpXMhaDqbNjhRKRHc9RGxnVQsQsslRO-AFnvQBl6Z9f7d0obzk2Q3KHkpleCXz8juiIKDAEmS1-l4l14cekEfHSflukdQ"/>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mt-xs">Bpk. Haryanto</h3>
+<p class="font-label-bold text-label-bold text-primary mt-1">Pelatih Utama</p>
+<p class="font-caption text-caption text-on-surface-variant mt-sm px-4">
+                            Mantan atlet daerah dengan pengalaman melatih selama lebih dari 10 tahun. Berkomitmen mencetak bibit unggul dari SMKN 2 Purwakarta.
+                        </p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- JADWAL LATIHAN -->
+<section class="py-xl bg-surface-container-low skewed-bg-reverse relative z-0" id="jadwal">
+<div class="max-w-container-max mx-auto px-gutter relative z-10 pt-lg">
+<div class="text-center mb-lg">
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile md:font-headline-lg md:text-headline-lg text-on-surface">Jadwal Latihan</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-xs">Persiapkan dirimu, jangan sampai terlewat!</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-md">
+<!-- Schedule Card 1 -->
+<div class="bg-surface-container-lowest p-md rounded-lg shadow-[0_4px_20px_rgba(0,0,0,0.05)] border border-outline-variant/50 hover:shadow-[0_12px_30px_rgba(0,0,0,0.1)] hover:-translate-y-1 transition-all duration-300">
+<div class="flex items-center justify-between mb-sm">
+<h3 class="font-headline-md text-headline-md text-on-surface">Senin</h3>
+<span class="material-symbols-outlined text-outline">calendar_today</span>
+</div>
+<div class="space-y-xs">
+<div class="flex items-center gap-2 text-on-surface-variant">
+<span class="material-symbols-outlined text-[20px] text-primary">schedule</span>
+<span class="font-body-md text-body-md">15.30 - 17.30 WIB</span>
+</div>
+<div class="flex items-center gap-2 text-on-surface-variant">
+<span class="material-symbols-outlined text-[20px] text-primary">location_on</span>
+<span class="font-body-md text-body-md">GOR Sekolah</span>
+</div>
+</div>
+<div class="mt-md pt-sm border-t border-outline-variant/30 font-caption text-caption text-outline">Latihan Fisik &amp; Dasar</div>
+</div>
+<!-- Schedule Card 2 -->
+<div class="bg-surface-container-lowest p-md rounded-lg shadow-[0_4px_20px_rgba(0,0,0,0.05)] border border-outline-variant/50 hover:shadow-[0_12px_30px_rgba(0,0,0,0.1)] hover:-translate-y-1 transition-all duration-300">
+<div class="flex items-center justify-between mb-sm">
+<h3 class="font-headline-md text-headline-md text-on-surface">Rabu</h3>
+<span class="material-symbols-outlined text-outline">calendar_today</span>
+</div>
+<div class="space-y-xs">
+<div class="flex items-center gap-2 text-on-surface-variant">
+<span class="material-symbols-outlined text-[20px] text-primary">schedule</span>
+<span class="font-body-md text-body-md">15.30 - 17.30 WIB</span>
+</div>
+<div class="flex items-center gap-2 text-on-surface-variant">
+<span class="material-symbols-outlined text-[20px] text-primary">location_on</span>
+<span class="font-body-md text-body-md">GOR Sekolah</span>
+</div>
+</div>
+<div class="mt-md pt-sm border-t border-outline-variant/30 font-caption text-caption text-outline">Teknik &amp; Pola Permainan</div>
+</div>
+<!-- Schedule Card 3 (Highlighted) -->
+<div class="bg-surface-container-lowest p-md rounded-lg shadow-[0_12px_30px_rgba(0,0,0,0.1)] border-2 border-secondary-container relative transform md:-translate-y-2">
+<div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-secondary-container text-on-secondary-container font-label-bold text-caption px-sm py-xs rounded-full whitespace-nowrap shadow-sm">
+                        Latihan Berikutnya
+                    </div>
+<div class="flex items-center justify-between mb-sm mt-2">
+<h3 class="font-headline-md text-headline-md text-on-surface">Sabtu</h3>
+<span class="material-symbols-outlined text-secondary-container icon-fill">stars</span>
+</div>
+<div class="space-y-xs">
+<div class="flex items-center gap-2 text-on-surface-variant">
+<span class="material-symbols-outlined text-[20px] text-primary">schedule</span>
+<span class="font-body-md text-body-md text-on-surface font-semibold">08.00 - 10.00 WIB</span>
+</div>
+<div class="flex items-center gap-2 text-on-surface-variant">
+<span class="material-symbols-outlined text-[20px] text-primary">location_on</span>
+<span class="font-body-md text-body-md text-on-surface font-semibold">GOR PBSI Kabupaten</span>
+</div>
+</div>
+<div class="mt-md pt-sm border-t border-outline-variant/30 font-caption text-caption text-on-surface-variant">Sparing &amp; Simulasi Pertandingan</div>
+</div>
+</div>
+</div>
+</section>
+<!-- PRESTASI -->
+<section class="py-xl bg-surface" id="prestasi">
+<div class="max-w-container-max mx-auto px-gutter">
+<div class="flex justify-between items-end mb-lg border-b-2 border-outline-variant/20 pb-sm">
+<div>
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile md:font-headline-lg md:text-headline-lg text-on-surface">Prestasi Membanggakan</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Hasil keringat dan kerja keras tim.</p>
+</div>
+<span class="material-symbols-outlined text-[48px] text-secondary-container opacity-50 hidden md:block">emoji_events</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-md">
+<!-- Achievement Card 1 -->
+<div class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.05)] border border-outline-variant/30 hover:shadow-[0_12px_30px_rgba(0,0,0,0.1)] transition-all duration-300 group">
+<div class="h-40 bg-surface-container-high overflow-hidden relative">
+<img alt="Juara 1 Kejuaraan Pelajar 2025" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="A photograph of a young male Indonesian high school badminton player standing proudly on the first-place podium. He is biting a gold medal and holding a shiny trophy. He wears a green and white school sports jersey. The background shows a crowded indoor sports stadium, out of focus. The mood is triumphant and energetic, with bright overhead arena lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDUZW-Spv-GY5dmqUAEH968OWh6LTwE9NHsOUNvbSbIvGJUtKLDYbOICVAxegZwuETuCBXZdxYuAfcOpSb355c7HbzPdNHMe79BIlL9eiCvf3_QAQDWe3W-PrdV5ghE9mR0TwN4ndiGlqNMPywBhioC7AZyXrN2JMQf3b1tLlyHCndhIBzZriizzBUmYqWVGeeq930SWrd4eHQDkjuDuBABcudtB72lhFiw__54UNtIG5z8F63TvkFFUw"/>
+<div class="absolute top-2 right-2 bg-secondary-container text-on-secondary-container px-2 py-1 rounded font-label-bold text-caption flex items-center gap-1 shadow-sm">
+<span class="material-symbols-outlined text-[14px]">military_tech</span> Juara 1
+                        </div>
+</div>
+<div class="p-sm">
+<p class="font-caption text-caption text-primary font-semibold mb-1">Tunggal Putra - 2025</p>
+<h3 class="font-label-bold text-label-bold text-on-surface leading-tight">Kejuaraan Pelajar Tingkat Kabupaten</h3>
+</div>
+</div>
+<!-- Achievement Card 2 -->
+<div class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.05)] border border-outline-variant/30 hover:shadow-[0_12px_30px_rgba(0,0,0,0.1)] transition-all duration-300 group">
+<div class="h-40 bg-surface-container-high overflow-hidden relative">
+<img alt="Juara 2 Ganda Putri 2024" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="A photograph of two female Indonesian high school students posing together on a badminton court. They are holding silver medals and a trophy, smiling broadly at the camera. They wear matching green team jerseys. The lighting is bright and clear, highlighting their athletic achievement. The style is modern sports photography." src="https://lh3.googleusercontent.com/aida-public/AB6AXuArD1aFdxxu-GA4EJFWgAfuI53mvAb9k6v3Mn-xhOIk1HFSAQlc7LKU21g4QNNOW-XVZeI5wHTj4gOk3y_NXy69R8MbgERVGoWiKfFzknBwaQ8nawxN3JpIFZ7h8JHzHx-YjtqPpThZ70PV8GYsTkGoih6aNXvurPi13h_csiVAjmeS8zGXzM0wzBZVLtkeMDAT3QsnBMi6RObuGPo1kla3xybDsrVI1NCFbRq1GewwO9dbXxwSCnNfXw"/>
+<div class="absolute top-2 right-2 bg-outline-variant text-on-surface px-2 py-1 rounded font-label-bold text-caption flex items-center gap-1 shadow-sm">
+<span class="material-symbols-outlined text-[14px]">military_tech</span> Juara 2
+                        </div>
+</div>
+<div class="p-sm">
+<p class="font-caption text-caption text-primary font-semibold mb-1">Ganda Putri - 2024</p>
+<h3 class="font-label-bold text-label-bold text-on-surface leading-tight">O2SN Tingkat Provinsi Jawa Barat</h3>
+</div>
+</div>
+<!-- Achievement Card 3 -->
+<div class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.05)] border border-outline-variant/30 hover:shadow-[0_12px_30px_rgba(0,0,0,0.1)] transition-all duration-300 group">
+<div class="h-40 bg-surface-container-high overflow-hidden relative flex items-center justify-center bg-primary/5">
+<span class="material-symbols-outlined text-[64px] text-secondary-container">trophy</span>
+<div class="absolute top-2 right-2 bg-secondary-container text-on-secondary-container px-2 py-1 rounded font-label-bold text-caption flex items-center gap-1 shadow-sm">
+<span class="material-symbols-outlined text-[14px]">military_tech</span> Juara 1
+                        </div>
+</div>
+<div class="p-sm">
+<p class="font-caption text-caption text-primary font-semibold mb-1">Beregu Campuran - 2024</p>
+<h3 class="font-label-bold text-label-bold text-on-surface leading-tight">Liga Antar Sekolah Se-Purwakarta</h3>
+</div>
+</div>
+<!-- Achievement Card 4 -->
+<div class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.05)] border border-outline-variant/30 hover:shadow-[0_12px_30px_rgba(0,0,0,0.1)] transition-all duration-300 group">
+<div class="h-40 bg-surface-container-high overflow-hidden relative">
+<img alt="Pemain Terbaik 2023" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="A dynamic, low-angle action shot of an Indonesian male student diving across a green badminton court to return a shot. The focus is sharp on the player, with motion blur indicating speed. The image conveys intense effort and high-level athletic skill in a bright, modern school gymnasium environment." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDaIPlg6-J2kb833QmQBO7SzHUFQeWpPplnIS7mznAGJL4IKhYHnI4lIgWfGdOShAU0pObILY_VciFnTKlo3WDhSZf0DW-EwFLbrwFFS7oJFaAnIS8y6ou7ht9edq6AZ7xG_RkwN1-cCLdtb0Wsfo_GA9zwuKChcYH8zwzwSYFniz2IjzWalw0oaMZCya0Pgkr-3BVYwgNhmFEMG3L7LXS4sohxNILGIjt0xm-8q9LRilzMgcv3stQfPQ"/>
+<div class="absolute top-2 right-2 bg-[#CD7F32] text-white px-2 py-1 rounded font-label-bold text-caption flex items-center gap-1 shadow-sm">
+<span class="material-symbols-outlined text-[14px]">military_tech</span> Juara 3
+                        </div>
+</div>
+<div class="p-sm">
+<p class="font-caption text-caption text-primary font-semibold mb-1">Tunggal Putra - 2023</p>
+<h3 class="font-label-bold text-label-bold text-on-surface leading-tight">Kejuaraan Terbuka PBSI Purwakarta</h3>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- GALERI -->
+<section class="py-xl bg-surface-container-high skewed-bg pb-[120px]" id="galeri">
+<div class="max-w-container-max mx-auto px-gutter pt-lg">
+<div class="text-center mb-lg">
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile md:font-headline-lg md:text-headline-lg text-on-surface">Galeri Kegiatan</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-xs">Momen latihan dan pertandingan kami.</p>
+</div>
+<!-- Bento Grid Layout -->
+<div class="grid grid-cols-2 md:grid-cols-4 gap-sm md:gap-md h-auto md:h-[500px]">
+<div class="col-span-2 md:col-span-2 md:row-span-2 bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm group relative">
+<img alt="Foto Tim Bulu Tangkis" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A wide-angle team photograph of about 20 Indonesian high school students sitting and standing on a green badminton court. They are wearing matching dark green and white sports uniforms. They are smiling and giving a 'thumbs up' gesture. In the center is their coach. The atmosphere is unified, cheerful, and sporty under bright indoor lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCAQkLVOexixIEo_rumoopCYb3VzjdK-gH9fN93uVyoTHH2g8HmuWPASw3kkowwqi33pqUWpV4wbMsTBJhRTJCAjKh-bGPnEIFfvr8Ojnvc0JaVWyWwHj3Rnb4n8E0lL-faBRD5vSaHJgNW6VLJAnd9KR5diqPS_v_dF7TxB7AYFyvwZ5iVKnAnfU1FKHe6hUy8umVM7Kbx5ES-9qbGet6gyByvB7qgPCf-OJ2rqdIrdsXSe5-etgk7YQ"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-md">
+<span class="font-label-bold text-label-bold text-on-primary">Foto Tim Angkatan 2024</span>
+</div>
+</div>
+<div class="col-span-1 md:col-span-1 md:row-span-1 bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm group relative">
+<img alt="Detail Raket" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Close-up photograph of a badminton racket hitting a shuttlecock just over the net. The focus is incredibly sharp on the strings and the feathers of the shuttlecock, with the background beautifully blurred in a bokeh effect showing indistinct green court colors and bright lights. The image conveys speed and precision." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC6cSXJ0-wjrwRN0REt2h_o1YhPosy-km2ZSHcdl6qlC1gVBZ_WF9kxc_YavmmpgZZfcO3t_WnlrVVrIeAvOYY--up3L9xYxDIELuwMrjwN5LQg4fm4aKdpIzhVZIVOfEc8vNpD0f8bWoGEpoZN32dTpMqAT2C8gV8hjqEWCpEbwxtjojr3o-h031GzuN2vjHksxmfa7Zhi4MkHVdV1VPiPGh5rUs-NJyIPEGPbsjDJmTCmqxO6iaVDpQ"/>
+</div>
+<div class="col-span-1 md:col-span-1 md:row-span-1 bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm group relative">
+<img alt="Smash Latihan" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A photograph of a young female Indonesian high school student in mid-air performing a jump smash on a badminton court. She looks determined and focused. The lighting highlights her athletic form against the somewhat dark, moody background of a large sports hall, creating a dramatic and powerful sporty aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCjh4jyTU84WyHY0NEppmXzli5zaa5yLvU9EuZvxHczkZIaSQc4AxoDWnnig8Ik02PsklCy2fg61B7yk1EQers76vZT_zazbVIj_JmccJxELMcYN_u_JGNucNLF8-AI5qFjU4OMZFsqYW4F8JnI2UMdnxYALXeBx_8TwJgcvsFDNzXsJJLOeYDutmVC4npas5s1-kJGGt-LtGpcOxUtcT_3F0ZO4sHeQvRVzgASlyuOXtMEgU6Xp_loxA"/>
+</div>
+<div class="col-span-2 md:col-span-2 md:row-span-1 bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm group relative">
+<img alt="Istirahat Latihan" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A candid photograph of two badminton players, a boy and a girl, sitting on a bench beside the court during a break. They are sweaty, holding water bottles and towels, and laughing together. The scene is lit by overhead gym lights, conveying a sense of camaraderie, teamwork, and the joy of sports despite the exhaustion of practice." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDhO1rZBOx4FvLwQA0Ue5OCBWoYanvRA5F1gcFWuwVSUhJAnG15THLJr1rrjRNq0lmdVMJs2ozBt2nmm1Eby18pL8GPv2GArxSZeY1DQjamFBvwGHqjf0EtbB8mltsDXn2_HkJh9yAYMOG0WjpXRdl8TDdKblxVJ_IBxA_gh9uTmlB5xeQUL5AcTfzMWsNN3WerHZE8HNDGS7MbHs6vezEiUkOHcIky5d5NMS-G1s8DWXbSoFsmTFmHQg"/>
+</div>
+</div>
+</div>
+</section>
+<!-- PENDAFTARAN -->
+<section class="py-xl bg-primary relative -mt-lg" id="pendaftaran">
+<!-- Abstract Decal -->
+<div class="absolute inset-0 overflow-hidden pointer-events-none">
+<div class="absolute top-10 left-10 w-64 h-64 bg-primary-container rounded-full mix-blend-screen blur-3xl opacity-50"></div>
+<div class="absolute bottom-10 right-10 w-96 h-96 bg-[#005226] rounded-full mix-blend-multiply blur-3xl opacity-50"></div>
+</div>
+<div class="max-w-3xl mx-auto px-gutter relative z-10">
+<div class="bg-surface-container-lowest rounded-2xl shadow-[0_20px_40px_rgba(0,0,0,0.2)] p-lg relative overflow-hidden">
+<!-- Card Decorative Top Border -->
+<div class="absolute top-0 left-0 w-full h-2 bg-secondary-container"></div>
+<div class="text-center mb-md">
+<span class="material-symbols-outlined text-[48px] text-primary mb-2">assignment</span>
+<h2 class="font-headline-md text-headline-md text-on-surface">Formulir Pendaftaran</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Bergabunglah bersama skuad badminton SMKN 2 Purwakarta.</p>
+</div>
+<form class="space-y-sm">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-sm">
+<!-- Nama Lengkap -->
+<div>
+<label class="block font-label-bold text-label-bold text-on-surface mb-xs" for="nama">Nama Lengkap</label>
+<input class="w-full bg-surface border-outline-variant rounded-md px-sm py-2 text-on-surface focus:border-primary focus:ring-1 focus:ring-primary transition-colors outline-none" id="nama" placeholder="Masukkan nama lengkap" type="text"/>
+</div>
+<!-- Kelas -->
+<div>
+<label class="block font-label-bold text-label-bold text-on-surface mb-xs" for="kelas">Kelas / Jurusan</label>
+<input class="w-full bg-surface border-outline-variant rounded-md px-sm py-2 text-on-surface focus:border-primary focus:ring-1 focus:ring-primary transition-colors outline-none" id="kelas" placeholder="Contoh: X RPL 1" type="text"/>
+</div>
+</div>
+<!-- Nomor HP -->
+<div>
+<label class="block font-label-bold text-label-bold text-on-surface mb-xs" for="nohp">Nomor WhatsApp</label>
+<input class="w-full bg-surface border-outline-variant rounded-md px-sm py-2 text-on-surface focus:border-primary focus:ring-1 focus:ring-primary transition-colors outline-none" id="nohp" placeholder="08xx-xxxx-xxxx" type="tel"/>
+</div>
+<!-- Alasan -->
+<div>
+<label class="block font-label-bold text-label-bold text-on-surface mb-xs" for="alasan">Alasan Mengikuti Ekskul</label>
+<textarea class="w-full bg-surface border-outline-variant rounded-md px-sm py-2 text-on-surface focus:border-primary focus:ring-1 focus:ring-primary transition-colors outline-none resize-none" id="alasan" placeholder="Ceritakan motivasi kamu..." rows="3"></textarea>
+</div>
+<!-- CTA Submit -->
+<div class="pt-sm">
+<button class="w-full font-label-bold text-label-bold bg-tertiary-container text-on-tertiary-container py-3 rounded-md hover:bg-tertiary transition-colors shadow-sm hover:shadow-md active:scale-[0.98] flex justify-center items-center gap-2" type="button">
+<span class="material-symbols-outlined">send</span>
+                            Kirim Pendaftaran
+                        </button>
+</div>
+</form>
+</div>
+</div>
+</section>
+<!-- JSON: Footer -->
+<footer class="w-full py-lg mt-xl bg-on-surface dark:bg-surface-container-lowest grid grid-cols-1 md:grid-cols-3 gap-lg px-gutter max-w-container-max mx-auto text-primary-fixed dark:text-primary-fixed-dim">
+<!-- Column 1: Brand & Desc -->
+<div class="space-y-sm">
+<div class="font-headline-md text-headline-md font-bold text-primary-fixed dark:text-on-surface flex items-center gap-2">
+<span class="material-symbols-outlined icon-fill">sports_tennis</span>
+                SMKN 2 Badminton
+            </div>
+<p class="font-body-md text-body-md text-surface-variant/80 max-w-xs">
+                Membangun generasi muda yang sehat, kompetitif, dan menjunjung tinggi nilai sportivitas melalui olahraga bulu tangkis.
+            </p>
+</div>
+<!-- Column 2: Links -->
+<div>
+<h4 class="font-label-bold text-label-bold text-primary-fixed mb-sm uppercase tracking-wider">Tautan Cepat</h4>
+<ul class="space-y-xs font-body-md text-body-md">
+<li><a class="text-surface-variant/80 hover:text-white transition-colors hover:opacity-80 focus:ring-2 focus:ring-primary-fixed outline-none rounded flex items-center gap-2" href="https://instagram.com/badminton.smkn2purwakarta" target="_blank">
+<span class="material-symbols-outlined text-[18px]">photo_camera</span> Instagram
+                </a></li>
+<li><a class="text-surface-variant/80 hover:text-white transition-colors hover:opacity-80 focus:ring-2 focus:ring-primary-fixed outline-none rounded" href="#jadwal">Jadwal Latihan</a></li>
+<li><a class="text-surface-variant/80 hover:text-white transition-colors hover:opacity-80 focus:ring-2 focus:ring-primary-fixed outline-none rounded" href="#prestasi">Prestasi</a></li>
+<li><a class="text-surface-variant/80 hover:text-white transition-colors hover:opacity-80 focus:ring-2 focus:ring-primary-fixed outline-none rounded" href="#pendaftaran">Pendaftaran</a></li>
+</ul>
+</div>
+<!-- Column 3: Contact/Location -->
+<div>
+<h4 class="font-label-bold text-label-bold text-primary-fixed mb-sm uppercase tracking-wider">Sekretariat</h4>
+<address class="not-italic font-body-md text-body-md text-surface-variant/80 space-y-2">
+<p class="flex items-start gap-2">
+<span class="material-symbols-outlined text-[20px] mt-1">location_on</span>
+                    Ruang Ekskul SMKN 2 Purwakarta,<br/>Jl. Jend. Sudirman No. 123,<br/>Purwakarta, Jawa Barat
+                </p>
+</address>
+</div>
+<!-- Copyright -->
+<div class="col-span-1 md:col-span-3 border-t border-surface-variant/20 mt-md pt-sm text-center">
+<p class="font-body-md text-body-md text-surface-variant/60">
+                © 2024 Bulu Tangkis SMKN 2 Purwakarta. All Rights Reserved.
+            </p>
+</div>
+</footer>
+</body></html>
